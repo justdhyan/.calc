@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: linear-gradient(135deg, #0f0f12 0%, #13111C 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glassmorphism {
+    @apply bg-black/20 backdrop-blur-md border border-white/10;
+    box-shadow: 
+      0 4px 24px -1px rgba(0, 0, 0, 0.2),
+      0 2px 8px -1px rgba(255, 255, 255, 0.05);
+  }
+
+  .neon-shadow {
+    @apply shadow-neon-purple-intense transition-all duration-300 hover:shadow-neon-purple;
+  }
+
+  .calculator-key {
+    @apply p-3 text-white rounded-xl border border-white/5 bg-dark-card/40 hover:bg-dark-card/60 shadow-sm transition-all duration-200;
+  }
+
+  .key-number {
+    @apply bg-dark-card/30 text-white;
+  }
+
+  .key-operation {
+    @apply bg-dark-card/50 font-semibold;
+  }
+
+  .key-function {
+    @apply bg-dark-card/40 text-white/90;
+  }
+
+  .key-equals {
+    @apply bg-gradient-to-r from-neon-purple/60 to-neon-purple-bright/60 text-white font-bold;
+  }
+
+  .key-memory {
+    @apply bg-dark-card/20 text-white/80 text-sm;
+  }
+
+  .Toaster[data-sonner-toaster][data-theme="light"] {
+    --toast-background: rgba(0, 0, 0, 0.8);
+    --toast-color: #fff;
+    --toast-border: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    transform: translateX(0);
+  }
+
+  .Toast[data-sonner-toast] {
+    backdrop-filter: blur(8px);
+    border-radius: 0.5rem;
+  }
+}
+
+@layer utilities {
+  .animate-gradient-flow {
+    background-size: 400% 400%;
+    animation: gradient-flow 15s ease infinite;
+  }
+
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
