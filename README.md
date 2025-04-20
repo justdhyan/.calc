@@ -7,4 +7,4 @@ A modern, minimalistic calculator built for the **Frontend UI Hackathon 2025**. 
 > 📝 **Prompt selected**: *Build a calculator with basic and scientific modes.*
 ## 🔗 Live Preview 👇
 
-🔴 https://
+🔴 https://calc-01.vercel.app/
